@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Início - IEBTS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .background {
+      background-size: cover;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    header img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    header span {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .button-panel {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 40px 30px;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .button-panel h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .menu-button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .menu-button:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="background">
+    <header>
+      <img src="img/ChatGPT_Image_12_de_mai._de_2025__07_41_10-removebg-preview (1).png" alt="Logo IEBTS" style="cursor: pointer;" />
+      <span>IEBTS</span>
+    </header>
+
+    <div class="button-panel">
+      <h2>Bem-vindo ao sistema IEBTS</h2>
+      <a class="menu-button" href="cadastro.html">Cadastro de Aluno</a>
+      <a class="menu-button" href="portal-aluno.html">Portal do Aluno</a>
+      <a class="menu-button" href="portal-professor.html">Portal do Professor</a>
+      <a class="menu-button" href="disciplinas.html">Disciplinas</a>
+      <a class="menu-button" href="modulo-academico.html">Módulo Acadêmico</a>
+      <a class="menu-button" href="biblioteca-digital.html">Biblioteca Digital</a>
+      <a class="menu-button" href="modulo-financeiro.html">Módulo Financeiro</a>
+    </div>
+  </div>
+
+</body>
+</html>

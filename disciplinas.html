@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disciplinas - IEBTS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/fundo-disciplinas.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #36454F, #1e3fef);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 98%;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .portal-text {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 90px auto;
+      background-color: rgba(255, 255, 255, 0.97);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #1e3fef;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #e6e6e6;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #1e3fef;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .warning {
+      color: red;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/ChatGPT_Image_12_de_mai._de_2025__07_41_10-removebg-preview (1).png" alt="Logo IEBTS" style="cursor: pointer;">
+      </a>
+      <span><strong>IEBTS</strong></span>
+    </div>
+    <div class="portal-text">DISCIPLINAS</div>
+  </header>
+
+  <div class="container">
+    <h2>Matriz Curricular - Escolha suas Disciplinas</h2>
+    <p>Selecione entre 4 e 9 disciplinas para o semestre.</p>
+    <div class="warning" id="warning"></div>
+    
+    <form id="disciplinas-form">
+      <table>
+        <thead>
+          <tr>
+            <th>Selecionar</th>
+            <th>Disciplina</th>
+            <th>Pré-Requisitos</th>
+            <th>Horário</th>
+            <th>Carga Horária</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" name="disciplina" value="ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES"></td>
+            <td>ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES</td>
+            <td>---</td>
+            <td>Qua (11:15-12:30)</td>
+            <td>30h</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="disciplina" value="FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO"></td>
+            <td>FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO</td>
+            <td>---</td>
+            <td>Ter (07:00-09:40)</td>
+            <td>60h</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="disciplina" value="LÓGICA DE PROGRAMAÇÃO E ALGORITMOS"></td>
+            <td>LÓGICA DE PROGRAMAÇÃO E ALGORITMOS</td>
+            <td>---</td>
+            <td>Seg (07:00-08:15) e Sex(07:00-09:40)</td>
+            <td>90h</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="disciplina" value="MATEMÁTICA I"></td>
+            <td>MATEMÁTICA I</td>
+            <td>---</td>
+            <td>Qui (07:00-09:40)</td>
+            <td>60h</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="disciplina" value="RACIOCÍNIO LÓGICO"></td>
+            <td>RACIOCÍNIO LÓGICO</td>
+            <td>---</td>
+            <td>Seg (09:50-12:30)</td>
+            <td>60h</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="disciplina" value="PROGRAMAÇÃO FRONT END"></td>
+            <td>PROGRAMAÇÃO FRONT END</td>
+            <td>LÓGICA DE PROGRAMAÇÃO E ALGORITMOS</td>
+            <td>Sex (09:50-12:30)</td>
+            <td>60h</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="disciplina" value="SISTEMAS OPERACIONAIS"></td>
+            <td>SISTEMAS OPERACIONAIS</td>
+            <td>ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES</td>
+            <td>Qua (07:00-09:40)</td>
+            <td>60h</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="disciplina" value="PROGRAMAÇÃO ORIENTADA A OBJETOS"></td>
+            <td>PROGRAMAÇÃO ORIENTADA A OBJETOS</td>
+            <td>LÓGICA DE PROGRAMAÇÃO E ALGORITMOS</td>
+            <td>Ter (09:50-12:30)</td>
+            <td>60h</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn" type="submit">Confirmar Matrícula</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('disciplinas-form');
+    const warning = document.getElementById('warning');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const selecionadas = document.querySelectorAll('input[name="disciplina"]:checked');
+      if (selecionadas.length < 4 || selecionadas.length > 9) {
+        warning.textContent = "Selecione entre 4 e 9 disciplinas.";
+        return;
+      }
+
+      // Aqui você poderia enviar os dados para o backend
+      const disciplinas = Array.from(selecionadas).map(d => d.value);
+      alert("Disciplinas selecionadas:\n" + disciplinas.join("\n"));
+      warning.textContent = "";
+    });
+  </script>
+
+</body>
+</html>

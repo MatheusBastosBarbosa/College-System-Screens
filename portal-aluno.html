@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal do Aluno - IEBTS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f4f8;
+    }
+
+    header {
+      background: linear-gradient(to right, #727be6, #1e3fef);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 98%;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .portal-text {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .container {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+
+    .left-panel {
+      width: 40%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh
+    }
+
+    .login-box {
+      width: 80%;
+      max-width: 350px;
+    }
+
+    .login-box h1 {
+      color: #727be6;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .login-box p {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1e3def85;
+      color: #000000a4;
+      border: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-box a {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .right-panel {
+      width: 60%;
+      background: url('img/imagem2.png') no-repeat center center;
+      background-size: cover;
+      min-height: 100vh
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/ChatGPT_Image_12_de_mai._de_2025__07_41_10-removebg-preview (1).png" alt="Logo IEBTS" style="cursor: pointer;">
+      </a>
+      <span><strong>IEBTS</strong></span>
+    </div>
+    <div class="portal-text">PORTAL DO ALUNO</div>
+  </header>
+
+  <div class="container">
+    <div class="left-panel">
+      <div class="login-box">
+        <h1>LOGIN</h1>
+        <p>Olá, informe seus dados abaixo e faça seu login.</p>
+        <input type="text" placeholder="Informe seu CPF">
+        <input type="password" placeholder="Informe sua senha">
+        <button onclick="window.location.href='disciplinas.html'">ENTRAR</button>
+        <a href="#">Esqueceu a senha?</a>
+      </div>
+    </div>
+    <div class="right-panel"></div>
+  </div>
+
+</body>
+</html>
